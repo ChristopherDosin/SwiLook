@@ -1,0 +1,55 @@
+.shopthelook {
+  .shopthelook-content {
+    overflow-y: auto;
+    box-shadow: -1px 0 5px 0 rgba(0,0,0,.1);
+    position: fixed;
+    z-index: 999999999;
+    background: #fff;
+    top: 0;
+    right: 0;
+    width: 33.3333333333%;
+    height: 100%;
+    .shopthelook-content--inner {
+      .unitize-padding(40, 40);
+      .shopthelook-title {
+        h1 {
+          margin-top:0;
+        }
+      }
+      .shopthelook-products {
+        .shopthelook--list {
+          .shopthelook--list-item {
+            list-style: none;
+            border-bottom: 1px solid #EEE;
+            .unitize-padding(20, 0);
+            .block-group {
+              > .block {
+                &:first-child {
+                  width:66.6%;
+                  .shopthelook--product-name {
+                    max-width: 65%;
+                    color: #999;
+                    text-overflow: ellipsis;
+                    .unitize(font-size, 12);
+                    .unitize(line-height, 14);
+                  }
+                  .shopthelook--product-price {
+                    .unitize(margin-top, 40);
+                    .unitize(font-size, 17);
+                    font-weight:700;
+                  }
+                }
+                &:last-child {
+                  width: 33.3%;
+                  img {
+                    .unitize(max-height, 140);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

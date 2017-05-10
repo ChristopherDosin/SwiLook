@@ -111,7 +111,7 @@ class SwiLook extends Plugin
          */
         $data['products'] = $products;
 
-        dump($data);
+        //dump($data);
 
         /*
          * Return all Data back to the View.
@@ -127,7 +127,7 @@ class SwiLook extends Plugin
     {
         $lessDir = __DIR__ . '/Resources/Views/frontend/_public/src/less/';
 
-        $less = new \Shopware\Components\Theme\LessDefinition(
+        $less = new LessDefinition(
             array(),
             array(
                 $lessDir . 'shopthelook.less'

@@ -61,7 +61,8 @@ class SwiLook extends Plugin
     {
         return [
             'Shopware_Controllers_Widgets_Emotion_AddElement' => 'onEmotionAddElement',
-            'Theme_Compiler_Collect_Plugin_Less' => 'onCollectLessFiles'
+            'Theme_Compiler_Collect_Plugin_Less' => 'onCollectLessFiles',
+            'Theme_Compiler_Collect_Plugin_Javascript' => 'addJsFiles'
         ];
     }
 
@@ -135,6 +136,19 @@ class SwiLook extends Plugin
         );
 
         return new ArrayCollection(array($less));
+    }
+
+    /**
+     * Provide the file collection for js files
+     *
+     * @return ArrayCollection
+     */
+    public function addJsFiles()
+    {
+        $jsFiles = [
+            __DIR__ . '/Resources/Views/frontend/_public/src/js/shop_the_look.js'
+        ];
+        return new ArrayCollection($jsFiles);
     }
 
 

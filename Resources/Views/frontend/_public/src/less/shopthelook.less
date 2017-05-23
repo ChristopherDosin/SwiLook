@@ -1,4 +1,18 @@
 .shopthelook {
+  .shopthelook-thumbnail {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      background: url("../img/thumbnailplus.png");
+      width:65px;
+      height:65px;
+      top: 20%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+  }
   .shopthelook-content {
     display: none;
     overflow-y: auto;
